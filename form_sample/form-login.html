@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form</title>
+</head>
+<body>
+  <h1>Inquiry form</h1>
+  <form action="#" method="POST">
+    <dl>
+      <dt><label for="username">name</label></dt>
+      <dd><input id="username" type="text" name="username"></dd>
+      <dt><label for="email">mail address</label></dt>
+      <dd><input id="email" type="text" name="email"></dd>
+
+      <dt><label for="area">area where you live</label></dt>
+      <dd>
+        <select id="area" name="area">
+          <option value="" selected>please choose</option>
+          <option value="hokkaido">hokkaido</option>
+          <option value="tohoku">tohoku</option>
+          <option value="kanto">kanto</option>
+          <option value="chubu">chubu</option>
+          <option value="kinki">kinki</option>
+          <option value="shikoku">shikoku</option>
+          <option value="kyushu">kyushu</option>
+          <option value="okinawa">okinawa</option>
+        </select>
+      </dd>
+
+      <dt>sex</dt>
+      <dd>
+        <label><input type="radio" name="gender" value="male" checked>male</label>
+        <label><input type="radio" name="gender" value="female">female</label>
+      </dd>
+
+      <dt><label for="contents">Content of inquiry</label></dt>
+      <dd><textarea id="contents" name="contents" cols="30" rows="10"></textarea></dd>
+
+      <dt><label for="privacy">agree to the privacy policy</label></dt>
+      <dd><input id="privacy" type="checkbox" name="privacy" value="1"></dd>
+    </dl>
+    <input type="submit" name="submit" value="submit">
+  </form>
+</body>
+</html>
