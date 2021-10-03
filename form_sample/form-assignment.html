@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Part-time job application form</title>
+</head>
+<body>
+  <h1>Part-time job application form</h1>
+  <form action="#" method="POST">
+    <dl>
+      <dt><label for="username">name</label></dt>
+      <dd><input id="username" type="text" name="username" required></dd>
+      <dt><label for="email">email</label></dt>
+      <dd><input id="email" type="text" name="email" required></dd>
+
+      <dt>sex</dt>
+      <dd>
+        <label><input type="radio" name="gender" value="male" checked>male</label>
+        <label><input type="radio" name="gender" value="female">female</label>
+      </dd>
+
+      <dt><label for="job">current your job</label></dt>
+      <dd>
+        <select name="job" id="job">
+          <option value="" selected>please choose</option>
+          <option value="student">student</option>
+          <option value="unemployed">unemployed</option>
+          <option value="other">other</option>
+        </select>
+      </dd>
+
+      <dt><label for="contents">self PR</label></dt>
+      <dd><textarea name="contents" id="contents" cols="30" rows="10"></textarea></dd>
+
+      <dt><label for="privacy">agree to the privacy policy</label></dt>
+      <dd><input id="privacy" type="checkbox" name="privacy" value="1"></dd>
+    </dl>
+    <input type="submit" name="submit" value="submit">
+  </form>
+</body>
+</html>
