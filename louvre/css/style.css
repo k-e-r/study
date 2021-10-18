@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Gotham",sans-serif;
+  font-family: "Gotham", sans-serif;
   line-height: 1;
   background: #fbf9f7;
   z-index: -10;
@@ -32,7 +32,7 @@ footer {
   font-size: 0.8rem;
   color: #fff;
   vertical-align: middle;
-  width:100%;
+  width: 100%;
   height: 50px;
   /* position: absolute; */
   position: relative;
@@ -51,7 +51,7 @@ footer {
 }
 
 .ts-h1 {
-  font-family: "Gotham",sans-serif;
+  font-family: "Gotham", sans-serif;
   font-size: 1.875rem;
   font-weight: 700;
   line-height: 1;
@@ -76,7 +76,7 @@ footer {
   grid-column: 3 / auto;
   pointer-events: auto;
   z-index: -3;
-  font-family: "Gotham",sans-serif;
+  font-family: "Gotham", sans-serif;
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1;
@@ -130,9 +130,10 @@ footer {
   /* border: 1px solid; */
 }
 
-.btn-trigger, .btn-trigger span {
+.btn-trigger,
+.btn-trigger span {
   display: inline-block;
-  transition: all .5s;
+  transition: all 0.5s;
   box-sizing: border-box;
 }
 
@@ -155,11 +156,11 @@ footer {
 }
 
 #btn.active span:nth-of-type(1) {
-  transform: translate(-1px,5px) rotate(-45deg);
+  transform: translate(-1px, 5px) rotate(-45deg);
 }
 
 #btn.active span:nth-of-type(3) {
-  transform: translate(-1px,-5px) rotate(45deg);
+  transform: translate(-1px, -5px) rotate(45deg);
 }
 
 #btn {
@@ -471,8 +472,10 @@ footer {
 .hero__content {
   align-content: space-between;
   min-height: 350px;
-  grid-template-rows: 1fr minmax(var(--hero-infobox-height),
-    var(--hero-infobox-height));
+  grid-template-rows: 1fr minmax(
+      var(--hero-infobox-height),
+      var(--hero-infobox-height)
+    );
 }
 
 .hero__media {
@@ -513,7 +516,7 @@ footer {
   /* background: #fbf9f7; */
   height: 100%;
   left: calc(100% / -3);
-  width: calc(100% + (100% * 1/3));
+  width: calc(100% + (100% * 1 / 3));
 }
 
 /* .hero__infohours {
@@ -545,7 +548,7 @@ footer {
   line-height: 1.375rem;
   text-decoration: underline;
   color: inherit;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 .text-welcome {
@@ -611,7 +614,7 @@ footer {
   will-change: opacity, transform; */
   color: inherit;
   text-decoration: none;
-	min-width: 70%;
+  min-width: 70%;
 }
 
 .image {
@@ -645,7 +648,7 @@ footer {
   line-height: 1.75rem;
   text-decoration: underline;
   color: inherit;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 .carousel-exhibitions__slide-excerpt {
@@ -680,7 +683,9 @@ footer {
   max-width: none;
   /* background-color: #dab0b0; */
   /* transform-origin: left; */
-  transform: scaleX(0) translateZ(0);
+  /* transform: scaleX(0) translateZ(0); */
+  transform: scaleX(1) translateZ(0);
+  animation: SlideIn 3s;
 }
 
 .spot-shadow {
@@ -731,7 +736,7 @@ footer {
 .quote {
   z-index: 1;
   font-size: 1.2rem;
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
   transition: all 1s ease;
   transform: rotateX(90deg);
   transition-delay: 1000ms;
@@ -769,13 +774,21 @@ transform: scaleY(1) translateZ(0); */
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .spot-large__headline {
@@ -791,7 +804,7 @@ transform: scaleY(1) translateZ(0); */
 }
 
 .ts-h2 {
-  font-family: "Gotham",sans-serif;
+  font-family: "Gotham", sans-serif;
   font-size: 1.875rem;
   font-weight: 700;
   line-height: 1;
@@ -801,7 +814,7 @@ transform: scaleY(1) translateZ(0); */
 .ts-h3 {
   margin-top: 30px;
   margin-bottom: 5px;
-  font-family: "Gotham",sans-serif;
+  font-family: "Gotham", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1;
@@ -809,7 +822,7 @@ transform: scaleY(1) translateZ(0); */
 }
 
 /* responsive */
-@media(max-width: 800px) {
+@media (max-width: 800px) {
   html {
     /* font-size: 0.8em; */
   }
@@ -817,7 +830,7 @@ transform: scaleY(1) translateZ(0); */
 
 @media (min-width: 35em) {
   .nav-mobile__dropdown {
-      width: 58.33333%;
+    width: 58.33333%;
   }
 }
 
@@ -825,7 +838,7 @@ transform: scaleY(1) translateZ(0); */
   .carousel-exhibitions__slide {
     min-width: 60%;
   }
-  
+
   .text-welcome__content {
     grid-column: 3 / span 7;
     font-size: 1.125rem;
@@ -845,7 +858,7 @@ transform: scaleY(1) translateZ(0); */
   .quote {
     z-index: 1;
     font-size: 1.5rem;
-    font-family: 'Lobster', cursive;
+    font-family: "Lobster", cursive;
     transition: all 1s ease;
     transform: rotateX(90deg);
     transition-delay: 1000ms;
