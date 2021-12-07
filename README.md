@@ -1,20 +1,21 @@
 # study
 sample pages
 
-1. A static page, no mobile support
+1. A static page, no mobile support<br>
 https://k-e-r.github.io/study/html5_css3/standard-layout/index.html
 
-2. A static page, mobile support
+2. A static page, mobile support<br>
 https://k-e-r.github.io/study/website_sample/index.html
 
-3. A static page with js, mobile only
+3. A static page with js, mobile only<br>
+louvre museum image page<br>
 https://k-e-r.github.io/study/louvre/index.html
 
-4. A static page with js, no mobile support
+4. A static page with js, no mobile support<br>
 https://k-e-r.github.io/study/karasu/index.html
 
-5. A static page, mobile support
+5. A static page, mobile support<br>
 https://k-e-r.github.io/study/bootstrap5_sample/01/index.html
 
-6. A form sample page, mobile support
+6. A form sample page, mobile support<br>
 https://k-e-r.github.io/study/bootstrap5_sample/02/index.html
