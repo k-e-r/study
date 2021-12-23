@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const util = require('util');
+// const fs = require('fs');
+import fs from 'fs';
+// const util = require('util');
+// const chalk = require('chalk');
+import chalk from 'chalk';
 
 // Method #2
 // const lstat = util.promisify(fs.lstat);
@@ -15,13 +18,19 @@ fs.readdir(process.cwd(), async (err, filenames) => {
     // throw new Error(err);
   }
 
-  for (let filename of filenames) {
-    try {
-      const stats = await lstat(filename);
+  const statPromises = filenames.map((filename) => {
+    return lstat(filename);
+  });
 
-      console.log(filename, stats.isFile());
-    } catch (err) {
-      console.log(err);
+  const allStats = await Promise.all(statPromises);
+
+  for (let stats of allStats) {
+    const index = allStats.indexOf(stats);
+
+    if (stats.isFile()) {
+      console.log(filenames[index]);
+    } else {
+      console.log(chalk.red.bold(filenames[index]));
     }
   }
 });
