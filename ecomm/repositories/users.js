@@ -21,10 +21,19 @@ class UsersRepository {
       })
     );
   }
+
+  async create(attrs) {
+    const records = await this.getAll();
+    records.push(attrs);
+    // write the updated 'records' array back to this.filename
+    await fs.promises.writeFile(this.filename, JSON.stringify(records));
+  }
 }
 
 const test = async () => {
   const repo = new UsersRepository('users.json');
+
+  await repo.create({ email: 'test@test.com', password: 'pass' });
 
   const users = await repo.getAll();
 
