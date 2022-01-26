@@ -31,7 +31,7 @@ router.post(
     const { title, price } = req.body;
     await productsRepo.create({ title, price, image });
 
-    res.send('submitted');
+    res.redirect('/admin/products');
   }
 );
 
@@ -70,5 +70,11 @@ router.post(
     res.redirect('/admin/products');
   }
 );
+
+router.post('/admin/products/:id/delete', requireAuth, async (req, res) => {
+  await productsRepo.delete(req.params.id);
+
+  res.redirect('/admin/products');
+});
 
 module.exports = router;
